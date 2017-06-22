@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width" , initial-scale="1.0">
+  <title>Time Sheet</title>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <!-- CSS -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <!-- Bootstrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <!-- JS -->
+  <script src="assets/js/script.js"></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="jumbotron">
+      <h1>Employ Data Management</h1>
+      <h2>A Comprehensive Directory of Employee Billable Hours</h2>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Current Employees</h3>
+          </div>
+          <div class="panel-body">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Role</th>
+                  <th>Start Date</th>
+                  <th>Monthly Rate</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Add Employee</h3>
+          </div>
+          <div class="panel-body">
+            <form class="" action="index.html" method="post">
+
+              <div class="form-group">
+                <label for="employee-name">Name</label><br>
+                <input type="text" name="employee-name">
+              </div>
+
+              <div class="form-group">
+                <label for="employee-role">Role</label><br>
+                <input type="text" name="employee-role">
+              </div>
+
+              <div class="form-group">
+                <label for="employee-start-date">Start Date (DD/MM/YY - ex: 01/01/89)</label><br>
+                <input type="text" name="employee-name">
+              </div>
+
+              <div class="form-group">
+                <label for="employee-monthly-rate">Monthly Rate</label><br>
+                <input type="text" name="employee-name">
+              </div>
+
+              <input type="submit" name="Submit" value="submit">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>
