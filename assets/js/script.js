@@ -13,7 +13,6 @@ let database = firebase.database()
 
 $(document).on("click", "#submit-button", function() {
   event.preventDefault();
-  console.log("click handler entered");
   database.ref("/users").push(
     {
     name: $("#input-employee-name").val().trim(),
@@ -25,24 +24,29 @@ $(document).on("click", "#submit-button", function() {
 });
 
 database.ref("/users").on("child_added", function(snapshot) {
-  console.log(snapshot.val());
   let $tr = $("<tr>");
 
-  let $name = $("<td>").addClass("name");
+  let $name = $("<td>").addClass("name text-center");
   $name.text(snapshot.val().name);
   $tr.append($name);
 
-  let $role = $("<td>").addClass("role");
+  let $role = $("<td>").addClass("role text-center");
   $role.text(snapshot.val().role);
   $tr.append($role);
 
-  let $startDate = $("<td>").addClass("start-date");
+  let $startDate = $("<td>").addClass("start-date text-center");
   $startDate.text(snapshot.val().startDate);
   $tr.append($startDate);
 
-  let $monthlyRate = $("<td>").addClass("monthly-rate");
+  let $monthlyRate = $("<td>").addClass("monthly-rate text-center");
   $monthlyRate.text(snapshot.val().rate);
   $tr.append($monthlyRate);
+
+  let momentStartDate = moment(snapshot.val().startDate, "MM/DD/YYYY");
+  let momentMonthsWorked = momentStartDate.diff(moment(), 'months');
+  let $monthsWorked = $("<td>").addClass("months-worked text-center");
+  $monthsWorked.text(JSON.stringify(momentMonthsWorked * -1) + " months");
+  $tr.append($monthsWorked);
 
   $("#employee-table-body").append($tr);
 
